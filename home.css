@@ -1,0 +1,282 @@
+body{
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 14px;
+    letter-spacing: 8px;
+}
+
+a:link { color: #000000; text-decoration: none}
+a:visited { color: #000000; text-decoration: none}
+a:hover { color: rgb(72, 73, 77); text-decoration: none}
+a:active { color: #000000; text-decoration: none}
+
+.navbar .navbar-toggler{
+    background-color: transparent;
+    border: none;
+}
+
+.navbar li a{
+    color: black !important;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: grey !important;
+    background-color: #FFFFFF !important;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-nav{
+    flex-direction: row;
+}
+
+.navbar-nav .nav-item{
+    padding: 0px 50px 0px 80px;
+    white-space: nowrap;
+}
+
+.footer{
+    background-color: white;
+    border: white;
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 8px;
+    letter-spacing: 6px;
+}
+
+.Contact{
+    padding-bottom: 4em;
+}
+
+.Contact img{
+    height: 33px;
+}
+
+.col-1 .btn-secondary{
+    background-color: transparent;
+    border-color: transparent;
+    size: 10px;
+}
+
+.Scroll{
+    padding-bottom: 20em;
+    height: 20px;
+}
+
+@media (max-height: 760px){
+    .Scroll, .nav{
+        display: none;
+    }
+}
+
+.min-vh-100{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding-bottom: 4em;
+}
+
+@media (max-height: 440px){
+    #Logo2{
+        height: 7em;
+    }
+    #Logo{
+        height: 15px;
+    }
+}
+body {
+    overflow: hidden;
+    max-height: 100%
+}
+
+.main {
+    height: calc(100vh - 6em);
+    margin-top: 3em;
+    max-height: 100vh;
+    position: fixed;
+    width: 100%
+}
+
+.gallery-one, .gallery-two {
+    height: auto;
+    overflow: hidden;
+    position: fixed;
+    width: 100%
+}
+
+.gallery-one a, .gallery-two a {
+    height: calc(50vh - 3em);
+    overflow: hidden;
+    position: absolute
+}
+
+.gallery-one a {
+    top: 0
+}
+
+.gallery-two a {
+    bottom: 0
+}
+
+.no-pointer, .no-pointer>* {
+    pointer-events: none!important
+}
+
+.gallery-two {
+    bottom: auto;
+    height: auto;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.clip-top {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    background: red;
+    overflow: hidden
+}
+
+.clip-bottom {
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    overflow: hidden
+}
+
+.gallery-image {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: calc(100vh - 6em);
+    margin: 0 35px;
+    overflow: hidden;
+    width: calc(70vw - 70px)
+}
+
+@media only screen and (min-width:480px) {
+    .gallery-image {
+        height: calc(100vh - 6em);
+        width: 10vw
+    }
+}
+
+@media only screen and (min-width:480px) and (min-height:400px) {
+    .gallery-image {
+        width: 15vw
+    }
+}
+
+@media only screen and (min-width:480px) and (min-height:600px) {
+    .gallery-image {
+        width: 20vw
+    }
+}
+
+@media only screen and (min-width:480px) and (min-height:800px) {
+    .gallery-image {
+        width: 25vw
+    }
+}
+
+@media only screen and (min-width:480px) {
+    .gallery-image img {
+        visibility: hidden
+    }
+}
+
+.gallery-image a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    pointer-events: auto;
+    width: 100%
+}
+
+.gallery-image img {
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: none;
+    height: auto;
+    max-width: 100%;
+    width: 100%
+}
+
+@media only screen and (min-width:480px) {
+    .gallery-image img {
+        display: block
+    }
+}
+
+.gallery-one {
+    background-color: white;
+}
+
+.gallery-one:after, .gallery-two:after {
+    content: "flickity";
+    display: none
+}
+.gallery-one .text {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:transparent;
+  }
+  
+  .gallery-one:hover .text {
+    opacity: 1;
+  }
+  .gallery-one .text {
+    color: white;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .gallery-two .text {
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: transparent;
+    }
+  
+  .gallery-two:hover .text {
+    opacity: 1;
+  }
+
+  .gallery-two .text {
+    color: white;
+    font-size: 20px;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+.nav{
+    margin-bottom: 8em;
+}
+
+.nav .nav-item .nav-link{
+    color: lightgrey;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
